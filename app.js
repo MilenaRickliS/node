@@ -10,7 +10,8 @@ res.writeHead(200);
 //res.end("Você está na página sobre");
 fs.readFile("sobre.txt", (err, data) => {
     if (err) {
-        return console.log(err);
+        console.log(err);
+        res.end('Página não encontrada');
     }
     console.log(data);
     res.end(data);
